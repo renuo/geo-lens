@@ -1,36 +1,41 @@
-# GEO Lens - KI-Sichtbarkeit in 1 Klick
+# GEO Lens: AI visibility in one click
 
-Chrome-Extension, die mit einem Klick prüft, wie gut die aktuelle Seite von KI-Suchen
-(ChatGPT, Claude, Perplexity, Google AI Overviews/AI Mode, Copilot) gefunden, gelesen und zitiert werden kann.
+A Chrome extension that checks, in one click, how well the current page can be found, read and cited by AI search
+(ChatGPT, Claude, Perplexity, Google AI Overviews/AI Mode, Copilot).
 
-## Installieren (lokal)
-1. `chrome://extensions` öffnen
-2. Oben rechts **Entwicklermodus** einschalten
-3. **Entpackte Erweiterung laden** → diesen Ordner wählen (der Ordner mit `manifest.json`)
-4. Icon an die Toolbar pinnen
+The extension's interface and the PDF report are in German.
+
+## Install (local)
+1. Open `chrome://extensions`
+2. Turn on **Developer mode** (top right)
+3. Click **Load unpacked** and select this folder (the one containing `manifest.json`)
+4. Pin the icon to the toolbar
+
+Then open any website and click the llama.
 
 ## Tabs
-- **Übersicht**: GEO-Score 0–100, Kategorien, wichtigste Hebel, Meta, Technik (Roh-HTML vs. gerendert)
-- **Crawler**: robots.txt-Status für 18 KI-Bots (Suche / Nutzer-Abruf / Training), Meta-Robots, X-Robots-Tag, llms.txt
-- **Struktur**: Überschriftenbaum, Fragen-Titel, Listen/Tabellen, Absatzlänge
-- **Zitierbar**: Passagen-Scoring (Länge, Fakten, Definition, Eigenständigkeit, Quellen), Zahlen, externe Quellen
-- **Schema**: JSON-LD/Microdata-Typen, sameAs, Rohdaten
-- **Vertrauen**: Autor, Datum, Aktualität, Über uns/Kontakt/Impressum, autoritative Quellen
-- **Tools**: Prompt direkt in ChatGPT/Perplexity/Claude/Google AI Mode/Copilot öffnen, Validatoren, Markenerwähnungen
+- **Übersicht** (Overview): GEO score 0–100, categories, biggest levers, meta tags, technical checks (raw vs. rendered HTML)
+- **Crawler**: robots.txt status for 18 AI bots (search / user fetch / training), meta robots, X-Robots-Tag, llms.txt
+- **Struktur** (Structure): heading tree, question headings, lists/tables, paragraph length
+- **Zitierbar** (Citable): passage scoring (length, facts, definitions, self-containedness, sources), numbers, external sources
+- **Schema**: JSON-LD/Microdata types, sameAs, raw data
+- **Vertrauen** (Trust): author, date, freshness, about/contact/legal pages, authoritative sources
+- **Tools**: open a prompt directly in ChatGPT/Perplexity/Claude/Google AI Mode/Copilot, validators, brand mentions
 
-Export: Markdown in die Zwischenablage oder JSON-Download.
+Export: Markdown to the clipboard or JSON download.
 
-## PDF-Report
-Die Daten für den Report werden bei jeder Analyse im Hintergrund bereitgelegt. Der Button **PDF-Report** öffnet einen
-Schritt-für-Schritt-Massnahmenplan und startet direkt den Druckdialog («Als PDF speichern»). Inhalt:
-- Deckblatt mit GEO-Score, Kategorien und möglichen Punkten
-- Massnahmenplan nach Wirkung sortiert: Checkbox, Priorität, Wer, Aufwand, Befund, Warum, Vorgehen, vorausgefüllte Vorlagen (robots.txt, llms.txt, JSON-LD, Meta-Tags)
-- Bereits erfüllte Punkte
-- Anhänge: KI-Crawler, Überschriften, beste Passagen, Glossar, jeweils mit «Einfach erklärt»
+## PDF report
+The report data is prepared in the background with every analysis. The **PDF-Report** button opens a
+step-by-step action plan and immediately starts the print dialog (choose "Save as PDF"). Contents:
+- Cover page with GEO score, categories and points available
+- Action plan sorted by impact: checkbox, priority, owner, effort, finding, why, how, prefilled templates (robots.txt, llms.txt, JSON-LD, meta tags)
+- Items already passing
+- Appendices: AI crawlers, headings, best passages, glossary, each with a plain-language explanation
 
-## Berechtigungen
-Nur `activeTab`, `scripting` und `storage` (für den Report): Die Analyse läuft erst beim Klick und nur im aktuellen Tab.
-robots.txt, llms.txt und Roh-HTML werden vom Tab selbst (same-origin) geladen. Es werden keine Daten an Dritte gesendet.
+## Permissions
+Only `activeTab`, `scripting`, `storage` (for the report) and `clipboardWrite` (for the Markdown export).
+The analysis runs only when you click, and only in the current tab. robots.txt, llms.txt and the raw HTML
+are fetched by the tab itself (same-origin). No data is sent to third parties.
 
-## Gewichtung
-Crawler 20 · Struktur 20 · Zitierbarkeit 20 · Schema 15 · Vertrauen 15 · Technik 10
+## Scoring weights
+Crawler 20 · Structure 20 · Citability 20 · Schema 15 · Trust 15 · Technical 10
