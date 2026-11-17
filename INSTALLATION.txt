@@ -1,16 +1,16 @@
-16NOV - KI-Sichtbarkeit in 1 Klick
+GEO Lens - KI-Sichtbarkeit in 1 Klick
 ==================================
 
 Installation in Google Chrome (ca. 2 Minuten)
 
-1. Die Datei "16nov-1.1.0.zip" herunterladen und entpacken (Doppelklick).
+1. Die Datei "geo-lens-1.1.0.zip" herunterladen und entpacken (Doppelklick).
    Es entsteht ein Ordner. Diesen Ordner an einem festen Ort ablegen und nicht loeschen,
    Chrome laedt die Erweiterung direkt von dort.
 2. In Chrome die Adresse  chrome://extensions  oeffnen.
 3. Oben rechts den "Entwicklermodus" einschalten.
 4. Oben links auf "Entpackte Erweiterung laden" klicken und den entpackten Ordner waehlen
    (den Ordner, in dem die Datei manifest.json liegt).
-5. Das Puzzle-Symbol in der Chrome-Toolbar anklicken und 16NOV anpinnen.
+5. Das Puzzle-Symbol in der Chrome-Toolbar anklicken und GEO Lens anpinnen.
 
 Benutzung: Eine beliebige Webseite oeffnen und auf das Lama klicken.
 Mit "PDF-Report" wird ein Massnahmenplan erstellt (im Druckdialog "Als PDF speichern" waehlen).
@@ -22,11 +22,11 @@ Das ist normal bei Erweiterungen, die nicht aus dem Chrome Web Store stammen.
 
 Installation in Google Chrome (about 2 minutes)
 
-1. Download "16nov-1.1.0.zip" and unzip it. Keep the folder in a permanent place.
+1. Download "geo-lens-1.1.0.zip" and unzip it. Keep the folder in a permanent place.
 2. Open  chrome://extensions  in Chrome.
 3. Turn on "Developer mode" (top right).
 4. Click "Load unpacked" (top left) and select the unzipped folder (the one containing manifest.json).
-5. Click the puzzle icon in the toolbar and pin 16NOV.
+5. Click the puzzle icon in the toolbar and pin GEO Lens.
 
 Usage: open any website and click the llama. "PDF-Report" creates an action plan
 (choose "Save as PDF" in the print dialog).

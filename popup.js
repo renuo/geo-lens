@@ -269,7 +269,7 @@ async function run() {
   try {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     if (!tab || !/^https?:/.test(tab.url || '')) {
-      view.innerHTML = '<div class="error">16NOV funktioniert nur auf normalen Webseiten (http/https).</div>';
+      view.innerHTML = '<div class="error">GEO Lens funktioniert nur auf normalen Webseiten (http/https).</div>';
       return;
     }
     const [res] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: geoAnalyze });

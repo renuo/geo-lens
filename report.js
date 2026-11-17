@@ -12,7 +12,7 @@ const GUIDE = {
       'Die Datei /robots.txt auf dem Server öffnen.',
       'Für die unten genannten Bots einen eigenen Block mit «Allow: /» ergänzen (Vorlage unten).',
       'Prüfen, dass kein allgemeiner «Disallow: /» für «User-agent: *» die Seite sperrt.',
-      'Datei speichern und 16NOV erneut laufen lassen.',
+      'Datei speichern und GEO Lens erneut laufen lassen.',
     ],
     snippet: (d) => {
       const blocked = d.crawl.bots.filter((b) => b.kind !== 'training' && !b.allowed);
@@ -258,7 +258,7 @@ const GUIDE = {
     steps: [
       'Im Browser «Seitenquelltext anzeigen» öffnen und prüfen, ob der Haupttext darin steht.',
       'Falls nicht: Server-Side Rendering oder Static Generation aktivieren (z. B. Next.js, Nuxt, Astro) oder für Bots vorrendern.',
-      'Danach 16NOV erneut laufen lassen, der Wert sollte über 70 % liegen.',
+      'Danach GEO Lens erneut laufen lassen, der Wert sollte über 70 % liegen.',
     ],
   },
   'Meta Description': {
@@ -367,7 +367,7 @@ function renderReport(d) {
   const kindLabel = { search: 'Suche', user: 'Nutzer-Abruf', training: 'Training' };
 
   document.getElementById('report').innerHTML = `
-    <div class="muted small">GEO-Report · erstellt mit 16NOV am ${esc(date.toLocaleString('de-CH'))}</div>
+    <div class="muted small">GEO-Report · erstellt mit GEO Lens am ${esc(date.toLocaleString('de-CH'))}</div>
     <h1>${esc(d.meta.title || host)}</h1>
     <div class="muted url">${esc(d.meta.url)}</div>
 
@@ -403,7 +403,7 @@ function renderReport(d) {
       <b class="t">Einfach erklärt: So arbeitest du mit diesem Report</b>
       <p>Die Schritte sind nach Wirkung sortiert: oben das, was am meisten bringt. Arbeite sie von oben nach unten ab und hake jeden erledigten Schritt ab.
       Bei jedem Schritt steht, wer ihn typischerweise erledigt (Entwicklung, Redaktion oder SEO/Marketing), wie lange er etwa dauert und was genau zu tun ist.
-      Wo es passt, gibt es eine fertige Vorlage zum Kopieren. Wenn alle Schritte mit hoher Priorität erledigt sind, die Seite mit 16NOV erneut prüfen.</p>
+      Wo es passt, gibt es eine fertige Vorlage zum Kopieren. Wenn alle Schritte mit hoher Priorität erledigt sind, die Seite mit GEO Lens erneut prüfen.</p>
     </div>
 
     <h2>Massnahmenplan</h2>
@@ -445,7 +445,7 @@ function renderReport(d) {
 
     <div class="footer">
       Die Bewertung basiert auf Faustregeln für KI-Sichtbarkeit und misst keine tatsächlichen Platzierungen in KI-Antworten.
-      Ob die Seite genannt wird, lässt sich mit dem Tools-Tab von 16NOV direkt in ChatGPT, Perplexity, Claude, Google AI Mode und Copilot testen.
+      Ob die Seite genannt wird, lässt sich mit dem Tools-Tab von GEO Lens direkt in ChatGPT, Perplexity, Claude, Google AI Mode und Copilot testen.
     </div>`;
 }
 
@@ -463,7 +463,7 @@ document.getElementById('btn-print').addEventListener('click', () => window.prin
       try { geoReport = JSON.parse(localStorage.getItem('geoReport') || 'null'); } catch (e) { /* ignorieren */ }
     }
     if (!geoReport) {
-      box.innerHTML = '<p>Keine Analyse gefunden. Bitte 16NOV auf einer Webseite öffnen und dort «PDF-Report» klicken.</p>';
+      box.innerHTML = '<p>Keine Analyse gefunden. Bitte GEO Lens auf einer Webseite öffnen und dort «PDF-Report» klicken.</p>';
       return;
     }
     renderReport(geoReport);

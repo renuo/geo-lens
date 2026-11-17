@@ -1,4 +1,4 @@
-# 16NOV - KI-Sichtbarkeit in 1 Klick
+# GEO Lens - KI-Sichtbarkeit in 1 Klick
 
 Chrome-Extension, die mit einem Klick prüft, wie gut die aktuelle Seite von KI-Suchen
 (ChatGPT, Claude, Perplexity, Google AI Overviews/AI Mode, Copilot) gefunden, gelesen und zitiert werden kann.

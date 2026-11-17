@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "16NOV - KI-Sichtbarkeit in 1 Klick",
-  "short_name": "16NOV",
+  "name": "GEO Lens - KI-Sichtbarkeit in 1 Klick",
+  "short_name": "GEO Lens",
   "version": "1.1.0",
   "description": "Prüft, wie gut eine Seite von ChatGPT, Claude, Perplexity und Google AI Overviews gefunden, gelesen und zitiert werden kann.",
   "permissions": ["activeTab", "scripting", "clipboardWrite", "storage"],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "16NOV",
+    "default_title": "GEO Lens",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
