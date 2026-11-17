@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>16NOV</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <img src="icons/icon32.png" alt="" width="20" height="20">
+      <span>16NOV</span>
+    </div>
+    <div class="actions">
+      <button id="btn-pdf" class="primary" title="Schritt-für-Schritt-Report als PDF">PDF-Report</button>
+      <button id="btn-copy" title="Report als Markdown kopieren">Kopieren</button>
+      <button id="btn-json" title="Rohdaten als JSON speichern">JSON</button>
+      <button id="btn-reload" title="Neu analysieren">↻</button>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="overview" class="active">Übersicht</button>
+    <button data-tab="crawler">Crawler</button>
+    <button data-tab="structure">Struktur</button>
+    <button data-tab="citability">Zitierbar</button>
+    <button data-tab="schema">Schema</button>
+    <button data-tab="trust">Vertrauen</button>
+    <button data-tab="tools">Tools</button>
+  </nav>
+
+  <main id="view">
+    <div class="loading">Seite wird analysiert …</div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="analyzer.js"></script>
+  <script src="scoring.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
